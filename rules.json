@@ -1,0 +1,12 @@
+{
+  "_comment": "Detection rules for org_audit.py. Edit these values to tune the checklist without touching code. All *_path entries are case-insensitive regular expressions applied to repo-relative file paths. placeholder_words drive the vocabulary-based secret detector (L4).",
+  "size_alert_mb": 50,
+  "placeholder_words": [
+    "changeme", "change_me", "change-me", "your_", "your-", "example",
+    "placeholder", "xxx", "todo", "dummy", "sample", "replace", "insert",
+    "fill", "redacted", "notreal", "fake", "test-only"
+  ],
+  "cred_path": "(^|/)(\\.env(\\.(local|production|prod|dev|development|staging))?|id_rsa|id_ed25519|credentials\\.json|[^/]+\\.(pem|p12|pfx|keystore))$",
+  "deps_path": "(^|/)(node_modules|\\.venv|venv|vendor|__pycache__)/",
+  "generated_path": "(^|/)[^/]+\\.(generated|min)\\.(js|css|py)$"
+}
